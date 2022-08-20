@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #830000;
+    height: 15vh;
+    width: 100vw;
+    padding: 30px 25px;
+    margin-bottom: 2vh;
+
+    
+    &__icon {
+    height: 100%;
+    width: 30%;
+    color: rgb(0, 0, 0);
+    }
+
+    &__title {
+    width: 40%;
+    text-align: center;
+    }
+}
+
+.navbar a {
+    display: block;
+    height: 32px;
+    width: 250px;
+    background: #fff;
+    color: #333;
+    border-radius: 32px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
