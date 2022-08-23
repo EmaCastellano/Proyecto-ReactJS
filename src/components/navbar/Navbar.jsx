@@ -1,6 +1,7 @@
 import React from 'react';
 import './navbar.scss'
 import { Icon } from '@iconify/react';
+import Carrito from '../CartWidget';
 
 const Navbar = () => {
     return (
@@ -11,7 +12,7 @@ const Navbar = () => {
             <a href="Servicios">Servicios</a>
             <a href="Programacion">Programación</a>
             <a href="Contacto">Contacto</a>
-            <Icon className="navbar__icon" icon="logos:google-developers" />
+            <Carrito/>
         </div>
     )
 }
