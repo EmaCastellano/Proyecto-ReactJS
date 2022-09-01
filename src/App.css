@@ -1,5 +1,8 @@
 .my-container {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
+}
 
+.App {
+    text-align: center;
 }
