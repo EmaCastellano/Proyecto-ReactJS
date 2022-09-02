@@ -1,21 +1,22 @@
 import React from 'react';
 import './navbar.scss'
-import { Icon } from '@iconify/react';
-import Carrito from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom'
 
 
-const Navbar = () => {
+export const Navbar = () => {
     return (
-        <div className="navbar">
-            <Icon icon="ic:round-signal-wifi-connected-no-internet-4" color="white" width="100" height="100" />
-            <h1 className="navbar__title">Servicios de Programación</h1>
-            <a href="Nosotros">Nosotros</a>
-            <a href="Servicios">Servicios</a>
-            <a href="Programacion">Programación</a>
-            <a href="Contacto">Contacto</a>
-            <Carrito/>
-        </div>
-    )
-}
 
-export default Navbar
+        <Navbar className="bg-header">
+            <div className="header-container">
+
+                <Link to="/"><h1 className="header-title">La Casa de la Programacion</h1></Link>
+
+                <nav className="header-navbar">
+                    <Link to='/productos/remeras' className="header-navlink">Nosotros</Link>
+                    <Link to='/productos/zapatillas' className="header-navlink">Servicios</Link>
+                    <Link to='/productos/gorros' className="header-navlink">Tienda</Link>
+                    <Link to='/productos/gorros' className="header-navlink">Contacto</Link>
+                    </nav>
+            </div>
+            </Navbar>
+            )}
