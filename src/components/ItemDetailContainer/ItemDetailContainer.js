@@ -10,8 +10,6 @@ const ItemDetailContainer = () => {
 
     const {itemId} = useParams()
 
-    console.log(itemId)
-    console.log(item)
 
     useEffect(() => {
         setLoading(true)
@@ -24,15 +22,13 @@ const ItemDetailContainer = () => {
             .finally(() => {
                 setLoading(false)
             })
-        // setear el estado con un único producto
-
-    }, [])
+    }, [itemId])
 
     return (
         <div>
             {
                 loading
-                ? <h2>Loading...</h2>
+                ? <h2>Codeando...</h2>
                 : <ItemDetail item={item} />
             }
             

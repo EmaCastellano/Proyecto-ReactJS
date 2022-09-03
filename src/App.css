@@ -1,12 +1,9 @@
+
 .my-container {
     max-width: 500px;
     margin: 0 auto;
 }
-
-.App {
-    text-align: center;
-}
-
+    
 img {
     width: 250px;
     height: 250px;
