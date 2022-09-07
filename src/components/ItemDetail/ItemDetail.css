@@ -1,30 +1,76 @@
 .itemDetail{
+    max-width: 1200px;
+    margin: 40px auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.itemDetail_card{
-    width: 1000px;
-    background-color: #1C4DA4;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+.itemDetail_img {
+    margin: auto;
+    display: block;
+    align-items: center;
+    border-radius: 24px;
+    width: 200px;
+    cursor: pointer;
+    max-width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 3px 3px rgb(250, 88, 182);
 }
+
 
 .itemDetail_title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 25px;
-    margin: 50px 0 50px 50px;
-    text-transform: uppercase;
-    color: #FA58B6;
+    margin: 0 150px 0 50px;
+    color: whitesmoke;
+    font-weight: 700;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.itemDetail_overview{
-    font-size: 13px;
+.itemDetail_precio{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
     margin: 0 150px 0 50px;
-    color: #FA58B6;
-    font-weight: 400;
+    color: whitesmoke;
+    font-weight: 700;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+    
+
+.itemDetail_descripcion{
+    font-family: monospace;
+    border: 5px dotted #FA58B6;
+    padding: 10px;
+    font-size: 15px;
+    margin: 0 150px 0 50px;
+    color: whitesmoke;
+    font-weight: 700;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.itemDetail_categoria{
+    font-size: 12px;
+    font-weight: 700;
+    margin: 40px auto;
+}
+
+
+.itemDetail_stock{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 60px auto;
 }
