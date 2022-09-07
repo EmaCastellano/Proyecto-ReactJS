@@ -10,9 +10,9 @@ const Navbar = () => {
             
             <h1 className="navbar__title">La Casa del Gamer</h1>
             <Link to='*' className="header-navlink">Home</Link>
-            <Link to='/productos/Memoriasram' className="header-navlink">Memorias Ram</Link>
-            <Link to='/productos/discos' className="header-navlink">Discos</Link>
-            <Link to='/productos/perifericos' className="header-navlink">Periféricos</Link>
+            <Link to='/productos/RAM' className="header-navlink">Memorias Ram</Link>
+            <Link to='/productos/Discos' className="header-navlink">Discos</Link>
+            <Link to='/productos/Perifericos' className="header-navlink">Periféricos</Link>
 
             <Icon className="navbar__icon" icon="el:shopping-cart-sign" color="white" width="50" height="50" />
         </div>

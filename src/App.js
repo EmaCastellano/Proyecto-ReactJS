@@ -27,9 +27,9 @@ const App = () => {
             <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
             <Route path='*' element={ <Navigate to="/"/>} />
 
-            <Route path="/memoriasram" element={<MemoriasRAM/>} />
-            <Route path="/discos" element={<Discos/>} />
-            <Route path="/perifericos" element={<Perifericos/>} />
+            <Route path='/productos/:categoryRAM' element={<MemoriasRAM/>} />
+            <Route path='/productos/:categoryDiscos' element={<Discos/>} />
+            <Route path='/productos/:categoryPerifericos' element={<Perifericos/>} />
             <Route path='*' element={ <Navigate to="/"/>} />
           </Routes>
 

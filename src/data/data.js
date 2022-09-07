@@ -6,7 +6,7 @@ export const stock = [
     img: "./assets/disco-ssd.jpg",
     price: "5000",
     stock: 5,
-    category: "Discos SSD",
+    category: "Discos",
 },
 {
     id: 2,
@@ -15,7 +15,7 @@ export const stock = [
     img: "./assets/memoria-ram.jpg",
     price: "7500",
     stock: 10,
-    category: "Memorias RAM",
+    category: "RAM",
 },
 {
     id: 3,
@@ -24,7 +24,7 @@ export const stock = [
     img: "/assets/mouse-inalambrico.jpg",
     price: "2500",
     stock: 20,
-    category: "Mouses"
+    category: "Perifericos"
 },
 {
     id: 4,
@@ -33,7 +33,7 @@ export const stock = [
     img: "/assets/teclado-mecanico.jpg",
     price: "3500",
     stock: 7,
-    category: "Teclados"
+    category: "Perifericos"
 },
 
 ]
