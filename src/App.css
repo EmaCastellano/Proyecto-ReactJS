@@ -1,15 +1,37 @@
 *{
     background-color: #212529;
     color: #FA58B6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.my-container {
-    max-width: 500px;
-    margin: 0 auto;
+.containerProducts{
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: rgb(250, 88, 182);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+h4 {
+    color: whitesmoke;
 }
     
 img {
-    width: 250px;
-    height: 250px;
+    border-radius: 24px;
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    max-width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 3px 3px rgb(250, 88, 182);
 }
 
 p {
