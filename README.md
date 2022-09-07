@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm Emanuel Castellano</h1>
-<h3 align="center">A passionate frontend developer from Argentina</h3>
+<h1 align="center">Hola 👋, soy Emanuel Castellano</h1>
+<h3 align="center">Un apasionado frontend developer de Argentina</h3>
 
 - 🔭 Actualmente estoy trabajando en el [Proyecto ReactJS](https://github.com/EmaCastellano/Proyecto-ReactJS.git). Es una tienda de accesorios gamers, en la cual uso las dependencias de bootstrap, react-bootstrap, react-router-dom, reactstrap y sass.
 
