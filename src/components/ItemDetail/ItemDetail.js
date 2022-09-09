@@ -1,18 +1,35 @@
-import Contador from "../ItemCount/ItemCount"
+import Counter from "../ItemCount/ItemCount"
 import "./ItemDetail.css";
-
-
+import Select from "../Select/Select"
+import { useState } from "react"
+import { Link } from "react-router-dom"
+import { useCartContext } from "../Context/CartContext";
 
 
 const ItemDetail = ({item}) => {
 
-    return (
+    const { cart, addToCart, isInCart } = useCartContext()
+    console.log(cart)
 
-
+    const [cantidad, setCantidad] = useState(1)
+    const [almacenamiento, setAlmacenamiento] = useState(item.almacenamiento[0].value)
+    const handleAgregar = () => {
+        const itemToCart = {
+            id: item.id,
+            precio: item.price,
+            nombre: item.name,
+            almaceniamiento: almacenamiento,
+            cantidad: cantidad,
+        }
         
-    <div className="itemDetail">
+        addToCart(itemToCart)
+    }
+
+    return (
+        <div className="itemDetail">
     
     <img className="itemDetail_img" src={`../${item.img}`}/>
+    
     <div>
 
     <h3 className="itemDetail_title">{item.name}</h3>
@@ -21,11 +38,24 @@ const ItemDetail = ({item}) => {
     <br/>
     <p className="itemDetail_categoria">Categoria: {item.category}</p>
     <h6 className="itemDetail_stock">Stock disponible: {item.stock}</h6>
-    <Contador/>
+    <hr/>
+    <Select options={item.almacenamiento} onSelect={setAlmacenamiento}/>
+    <hr/>
     </div>
-    
-</div>
+        
+        {
+            isInCart(item.id)
+            ?   <Link to="/cart" className="btn btn-success my-2">Terminar mi compra</Link>
+            :   <Counter 
+                    max={item.stock}
+                    Counter={cantidad}
+                    setCounter={setCantidad}
+                    handleAgregar={handleAgregar}
+                />
+        
+        }</div>
     )
 }
+
 
 export default ItemDetail

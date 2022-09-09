@@ -1,9 +1,20 @@
-import { Icon } from '@iconify/react';
+import { useContext } from 'react'
+import { BsFillCartCheckFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../Context/CartContext'
 
-const Carrito = () => {
+
+
+const CartWidget = () => {
+
+    const { cartQuantity } = useContext(CartContext)
+
     return (
-<Icon icon="el:shopping-cart-sign" color="white" width="50" height="50" />
+        <Link to="/cart">
+            <BsFillCartCheckFill/>
+            <span>{cartQuantity()}</span>
+        </Link>
     )
 }
 
-export default Carrito;
+export default CartWidget

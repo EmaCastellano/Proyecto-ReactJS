@@ -7,7 +7,13 @@ export const stock = [
     price: "5000",
     stock: 5,
     category: "Discos",
+    almacenamiento: [
+        { value: '128', text: '128 GB'}, 
+        { value: '256', text: '256 GB'}, 
+        { value: '512', text: '512 GB'},
+    ]
 },
+
 {
     id: 2,
     name: "Memoria RAM",
@@ -16,7 +22,13 @@ export const stock = [
     price: "7500",
     stock: 10,
     category: "RAM",
+    almacenamiento: [
+        { value: '4', text: '4 GB'}, 
+        { value: '8', text: '8 GB'}, 
+        { value: '16', text: '16 GB'},
+    ]
 },
+
 {
     id: 3,
     name: "Mouse Inalámbrico",

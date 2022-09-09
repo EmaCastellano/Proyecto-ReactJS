@@ -1,37 +1,45 @@
-import { useState } from "react"
-import { Icon } from '@iconify/react';
 
-const Contador = () => {
 
-    const [counter, setCounter] = useState(1)
-
-    const handleSumar = () => {
-        setCounter(counter + 1)
-    }
+const Counter = ({max, Counter, setCounter, handleAgregar}) => {
 
     const handleRestar = () => {
-        if (counter > 1 ) {
-            setCounter(counter - 1)
+        if (Counter > 1) {
+            setCounter(Counter - 1)
+        }
+    }
+    
+    const handleSumar = () => {
+        if (Counter < max ) {
+            setCounter(Counter + 1)
         }
     }
 
 
     return (
-        <div className="container my-5">
-            
-            <h4>Elegí la cantidad de productos que deseas solicitar</h4>
-            <hr/>
-            
+        <div>
+            <button 
+                className="btn btn-outline-primary"
+                onClick={handleRestar}
+            >
+                -
+            </button>
 
-            <button onClick={handleRestar} className="btn btn-outline-danger">-</button>
-            <span className="mx-4">{counter}</span>
-            <button onClick={handleSumar} className="btn btn-success">+</button>
-            <hr/>
-            <button className="btn btn-dark">Agregar al Carrito </button>
-            <Icon icon="entypo:shopping-cart" color="black" width="50" height="50" />
+            <span className="mx-3">{Counter}</span>
+
+            <button 
+                className="btn btn-primary"
+                onClick={handleSumar}
+            >
+                +
+            </button>
+
+            <br/>
+
+            <button onClick={handleAgregar} className="btn btn-success my-2">
+            Agregar al carrito
+            </button>
         </div>
     )
 }
 
-
-export default Contador;
+export default Counter

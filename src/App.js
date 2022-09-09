@@ -7,6 +7,9 @@ import Navbar from './components/Navbar/Navbar';
 import MemoriasRAM from './components/MemoriasRAM/MemoriasRAM';
 import Discos from './components/Discos/Discos';
 import Perifericos from './components/Perifericos/Perifericos';
+import { CartProvider } from './components/Context/CartContext';
+import Cart from './components/Cart/Cart';
+
 
 
 
@@ -17,6 +20,8 @@ const App = () => {
 
   return (
 
+    <CartProvider>
+
       <BrowserRouter>
 
         <Navbar/>
@@ -26,7 +31,8 @@ const App = () => {
             <Route path='/productos/:categoryId' element={<ItemListContainer/>} />
             <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
             <Route path='*' element={ <Navigate to="/"/>} />
-
+            
+            <Route path='/cart' element={<Cart/>}/>
             <Route path='/productos/:categoryRAM' element={<MemoriasRAM/>} />
             <Route path='/productos/:categoryDiscos' element={<Discos/>} />
             <Route path='/productos/:categoryPerifericos' element={<Perifericos/>} />
@@ -34,6 +40,8 @@ const App = () => {
           </Routes>
 
       </BrowserRouter>
+
+      </CartProvider>
 
   );
 }
