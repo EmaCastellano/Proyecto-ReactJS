@@ -8,10 +8,11 @@ const init = JSON.parse(localStorage.getItem('carrito')) || []
 
 export const CartProvider = ({children}) => {
 
-    const [cart, setCart] = useState(init)
+
+  const [cart, setCart] = useState(init)
 
 
-    const addToCart = (item) => {
+  const addToCart = (item) => {
       setCart([...cart, item])
     }
     
@@ -37,10 +38,10 @@ export const CartProvider = ({children}) => {
             text: "Esta acción es irreversible",
             icon: 'warning',
             showCancelButton: true,
-            
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, estoy seguro'
+            confirmButtonText: 'Si, estoy seguro',
+            cancelButtonText: 'No, mejor no',
           }).then((result) => {
             if (result.isConfirmed) {
                 setCart([])

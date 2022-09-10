@@ -1,6 +1,5 @@
 *{
-    background-color: #212529;
-    color: #FA58B6;
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,13 +14,13 @@
 }
 
 h2 {
-    color: rgb(250, 88, 182);
+    color: black;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 50px;
 }
 h4 {
-    color: whitesmoke;
+    color: black;
 }
     
 .item_img {
@@ -32,13 +31,13 @@ h4 {
     max-width: 250px;
     padding: 10px;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 3px 3px rgb(250, 88, 182);
+    box-shadow: 0px 0px 3px 3px black;
 }
 
 p {
     
         text-align: left;
-        color: #FA58B6;
+        color: black;
         font-size: 12px;
         font-family: "Anton", sans-serif;
         text-transform: uppercase;
@@ -47,3 +46,4 @@ p {
         margin-top: 10px;
         
     }
+

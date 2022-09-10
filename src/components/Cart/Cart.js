@@ -10,11 +10,11 @@ const Cart = () => {
         <div className="itemDetail">
             { cart.map((item) => (
                 <div>
-                    <img className="itemDetail_img" src={item.img}/>
+                <img className="itemDetail_img" src={`../${item.img}`}/>
                     <h3>{item.name}</h3>
                     <p>Precio: $ {item.price}</p>
-                    <p>cantidad: {item.cantidad}</p>
-                    <small>Almacenamiento: {item.almacenamiento} GB</small>
+                    <p>Cantidad: {item.cantidad}</p>
+                    <small>Modelo: {item.modelo}</small>
                     <button onClick={() => removeItem(item.id)} className="btn btn-danger mx-2"><BsFillTrashFill/></button>
                     <hr/>
                 </div>

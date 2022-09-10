@@ -4,9 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import MemoriasRAM from './components/MemoriasRAM/MemoriasRAM';
-import Discos from './components/Discos/Discos';
-import Perifericos from './components/Perifericos/Perifericos';
+import Footer from './components/Footer/Footer'
 import { CartProvider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
 
@@ -33,15 +31,15 @@ const App = () => {
             <Route path='*' element={ <Navigate to="/"/>} />
             
             <Route path='/cart' element={<Cart/>}/>
-            <Route path='/productos/:categoryRAM' element={<MemoriasRAM/>} />
-            <Route path='/productos/:categoryDiscos' element={<Discos/>} />
-            <Route path='/productos/:categoryPerifericos' element={<Perifericos/>} />
+            
             <Route path='*' element={ <Navigate to="/"/>} />
           </Routes>
-
+        <Footer/>
       </BrowserRouter>
 
       </CartProvider>
+
+      
 
   );
 }

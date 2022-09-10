@@ -12,13 +12,13 @@ const ItemDetail = ({item}) => {
     console.log(cart)
 
     const [cantidad, setCantidad] = useState(1)
-    const [almacenamiento, setAlmacenamiento] = useState(item.almacenamiento[0].value)
+    const [modelo, setModelo] = useState(item.modelo[0].value)
     const handleAgregar = () => {
         const itemToCart = {
             id: item.id,
             precio: item.price,
             nombre: item.name,
-            almaceniamiento: almacenamiento,
+            modelo: modelo,
             cantidad: cantidad,
         }
         
@@ -39,7 +39,8 @@ const ItemDetail = ({item}) => {
     <p className="itemDetail_categoria">Categoria: {item.category}</p>
     <h6 className="itemDetail_stock">Stock disponible: {item.stock}</h6>
     <hr/>
-    <Select options={item.almacenamiento} onSelect={setAlmacenamiento}/>
+    <small>Modelo: </small>
+    <Select options={item.modelo} onSelect={setModelo}/> 
     <hr/>
     </div>
         
