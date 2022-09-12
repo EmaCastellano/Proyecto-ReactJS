@@ -10,7 +10,7 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const { categoryId } = useParams()
+    const { categoriaId } = useParams()
     
 
     useEffect(() => {
@@ -18,10 +18,10 @@ const ItemListContainer = () => {
 
         pedirDatos()
             .then( (res) => {
-                if (!categoryId) {
+                if (!categoriaId) {
                     setProductos(res)
                 } else {
-                    setProductos( res.filter((prod) => prod.category === categoryId) )
+                    setProductos( res.filter((prod) => prod.categoria === categoriaId) )
                 }
             })
             .catch( (error) => {
@@ -30,7 +30,7 @@ const ItemListContainer = () => {
             .finally(() => {
                 setLoading(false)
             })
-    }, [categoryId])
+    }, [categoriaId])
 
 
     return (

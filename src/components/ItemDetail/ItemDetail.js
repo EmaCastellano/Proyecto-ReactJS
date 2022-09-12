@@ -16,8 +16,10 @@ const ItemDetail = ({item}) => {
     const handleAgregar = () => {
         const itemToCart = {
             id: item.id,
-            precio: item.price,
-            nombre: item.name,
+            precio: item.precio,
+            nombre: item.nombre,
+            img: item.img,
+            categoria: item.categoria,
             modelo: modelo,
             cantidad: cantidad,
         }
@@ -32,11 +34,11 @@ const ItemDetail = ({item}) => {
     
     <div>
 
-    <h3 className="itemDetail_title">{item.name}</h3>
-    <h2 className="itemDetail_precio">$ {item.price}</h2>
-    <p className="itemDetail_descripcion">{item.description}</p>
+    <h3 className="itemDetail_title">{item.nombre}</h3>
+    <h2 className="itemDetail_precio">Precio: $ {item.precio}</h2>
+    <p className="itemDetail_descripcion">{item.descripcion}</p>
     <br/>
-    <p className="itemDetail_categoria">Categoria: {item.category}</p>
+    <p className="itemDetail_categoria">Categoria: {item.categoria}</p>
     <h6 className="itemDetail_stock">Stock disponible: {item.stock}</h6>
     <hr/>
     <small>Modelo: </small>
