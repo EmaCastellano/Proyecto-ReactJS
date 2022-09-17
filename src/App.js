@@ -34,7 +34,9 @@ const App = () => {
             
             <Route path='*' element={ <Navigate to="/"/>} />
           </Routes>
+
         <Footer/>
+        
       </BrowserRouter>
 
       </CartProvider>
