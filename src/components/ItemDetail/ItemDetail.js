@@ -9,7 +9,6 @@ const ItemDetail = ({item}) => {
     const { addToCart, isInCart } = useCartContext()
 
     const [cantidad, setCantidad] = useState(1)
-    // const [modelo, setModelo] = useState(item.modelo[0].value)
 
     const handleAgregar = () => {
         const itemToCart = {
@@ -18,7 +17,6 @@ const ItemDetail = ({item}) => {
             nombre: item.nombre,
             img: item.img,
             categoria: item.categoria,
-            // modelo: modelo,
             cantidad: cantidad,
         }
         
