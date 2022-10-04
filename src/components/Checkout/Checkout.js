@@ -122,7 +122,7 @@ const Checkout = () => {
                     placeholder="Dirección"
                 />
 
-                <button type="submit" className="btn btn-primary">Enviar</button>
+                <button type="submit" className="btn-checkout">Enviar</button>
             </form>
 
         </div>

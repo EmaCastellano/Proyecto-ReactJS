@@ -37,14 +37,12 @@ const ItemDetail = ({item}) => {
     <p className="itemDetail_categoria">categoria: {item.categoria}</p>
     <h6 className="itemDetail_stock">Stock disponible: {item.stock}</h6>
     <hr/>
-    {/* <small>Modelo: </small>
-    <Select options={item.modelo} onSelect={setModelo}/>  */}
     <hr/>
     </div>
         
         {
             isInCart(item.id)
-            ?   <Link to="/cart" className="btn btn-success my-2">Finalizar compra</Link>
+            ?   <Link to="/cart" className="btn-carrito">Finalizar compra</Link>
             :   <Counter 
                     max={item.stock}
                     Counter={cantidad}

@@ -35,7 +35,7 @@ const Counter = ({max, Counter, setCounter, handleAgregar}) => {
 
             <br/>
 
-            <button onClick={handleAgregar} className="btn btn-success my-2">
+            <button onClick={handleAgregar} className="btn-carrito">
             Agregar al carrito
             </button>
         </div>
