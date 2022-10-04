@@ -1,4 +1,4 @@
-
+import "./Cart.css";
 import { useContext } from 'react'
 import { BsFillTrashFill } from 'react-icons/bs'
 import { CartContext } from '../Context/CartContext'
@@ -19,15 +19,15 @@ const Cart = () => {
     }
 
     return (
-        <div className="itemDetail">
+        <div className="itemCart">
             { cart.map((item) => (
             <div key={item.id}>
-            <h3 className="itemDetail_title">{item.nombre}</h3>
+            <h3 className="itemCart_text">{item.nombre}</h3>
             <img className="itemDetail_img" src={`../${item.img}`}/>
-            <h2 className="itemDetail_precio">Precio: $ {item.precio}</h2>
+            <h2 className="itemCart_text">Precio: $ {item.precio}</h2>
             {/* <p>Modelo: {item.modelo} </p>  */}
             <hr/>
-            <button onClick={() => removeItem(item.id)} className="btn btn-danger mx-2"><BsFillTrashFill/></button>
+            <button onClick={() => removeItem(item.id)} className="btn btn-danger"><BsFillTrashFill/></button>
             <hr/>
                 </div>
             

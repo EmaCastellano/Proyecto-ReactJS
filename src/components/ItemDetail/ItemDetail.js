@@ -34,7 +34,7 @@ const ItemDetail = ({item}) => {
     <h2 className="itemDetail_precio">Precio: $ {item.precio}</h2>
     <p className="itemDetail_descripcion">{item.descripcion}</p>
     <br/>
-    <p className="itemDetail_categoria">Categoria: {item.categoria}</p>
+    <p className="itemDetail_categoria">categoria: {item.categoria}</p>
     <h6 className="itemDetail_stock">Stock disponible: {item.stock}</h6>
     <hr/>
     {/* <small>Modelo: </small>

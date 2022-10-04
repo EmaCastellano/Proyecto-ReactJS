@@ -7,13 +7,13 @@ export const useProductos = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const { categoryId } = useParams()
+    const { categoriaId } = useParams()
 
     useEffect(() => {
         setLoading(true)
         const productosRef = collection(db, 'productos')
-        const q = categoryId 
-                    ? query(productosRef, where('category', '==', categoryId) )
+        const q = categoriaId 
+                    ? query(productosRef, where('categoria', '==', categoriaId) )
                     : productosRef
         getDocs(q)
             .then((resp) => {
@@ -26,7 +26,7 @@ export const useProductos = () => {
                 setLoading(false)
             })
         
-    }, [categoryId])
+    }, [categoriaId])
 
     return ({
         productos, loading
