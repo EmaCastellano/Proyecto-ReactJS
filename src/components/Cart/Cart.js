@@ -25,6 +25,7 @@ const Cart = () => {
             <h3 className="itemCart_text">{item.nombre}</h3>
             <img className="itemDetail_img" src={`../${item.img}`}/>
             <h2 className="itemCart_text">Precio: $ {item.precio}</h2>
+            <h4 className="itemCart_text">Cantidad: {item.cantidad}</h4>
             <hr/>
             <button onClick={() => removeItem(item.id)} className="btn btn-danger"><BsFillTrashFill/></button>
             <hr/>
@@ -35,7 +36,7 @@ const Cart = () => {
 
             <h4>Total: ${cartTotal()}</h4>
             <button onClick={emptyCart} className="btn-checkout">Vaciar carrito</button>
-            <Link className="btn-checkout" to="/checkout">Finalizar mi compra</Link> 
+            <Link className="btn-checkout" to="/checkout">Finalizar compra</Link> 
         </div>
     )
 }
