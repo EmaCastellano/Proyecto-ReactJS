@@ -39,16 +39,16 @@ const ItemDetail = ({item}) => {
     <hr/>
     <hr/>
     </div>
-        
-        {
-            isInCart(item.id)
-            ?   <Link to="/cart" className="btn-carrito">Finalizar compra</Link>
-            :   <Counter 
-                    max={item.stock}
-                    Counter={cantidad}
-                    setCounter={setCantidad}
-                    handleAgregar={handleAgregar}
-                />
+
+    {
+        isInCart(item.id)
+        ?   <Link to="/cart" className="btn-carrito">Finalizar compra</Link>
+        :   <Counter 
+            max={item.stock}
+            Counter={cantidad}
+            setCounter={setCantidad}
+            handleAgregar={handleAgregar}
+            />
         
         }</div>
     )

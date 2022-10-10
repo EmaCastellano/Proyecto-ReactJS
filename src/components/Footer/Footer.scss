@@ -27,8 +27,14 @@
     flex-direction: column;
     align-items: center;
     font-family: monospace;
+    
+    p {color: whitesmoke;
+        font-size: 15px;
+    }
 
     h2{
     margin: 1.5rem;
+    color: whitesmoke;
+    font-size: 40px;
     }
 }

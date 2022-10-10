@@ -4,6 +4,7 @@ import { useCartContext } from "../Context/CartContext"
 import { addDoc, collection, getDocs, writeBatch, query, where, documentId } from 'firebase/firestore'
 import { db } from "../../firebase/config"
 import { useForm } from "../../hooks/useForm"
+import './Checkout.css'
 
 const Checkout = () => {
 
@@ -90,43 +91,45 @@ const Checkout = () => {
     }
 
     return (
-        <div className="container my-5">
-            <h2>Ultimo paso</h2>
-            <hr/>
+    
+    <div className="container my-5">
+    <h2>Último paso</h2>
+    <hr/>
 
-            <form onSubmit={handleSubmit}>
-                <input 
-                    name="nombre"
-                    onChange={handleInputChange}
-                    value={values.nombre}
-                    type={'text'} 
-                    className="my-3 form-control" 
-                    placeholder="Nombre y Apellido"
-                />
+    <form onSubmit={handleSubmit}>
+        <input
+        name="nombre"
+        onChange={handleInputChange}
+        value={values.nombre}
+        type={'text'} 
+        className="my-3 form-control" 
+        placeholder="Nombre y Apellido"
+    />
 
-                <input 
-                    name="email"
-                    onChange={handleInputChange}
-                    value={values.email}
-                    type={'email'} 
-                    className="my-3 form-control" 
-                    placeholder="Email"
-                />
+    <input 
+        name="email"
+        onChange={handleInputChange}
+        value={values.email}
+        type={'email'} 
+        className="my-3 form-control" 
+        placeholder="Email"
+    />
 
-                <input 
-                    name="direccion"
-                    onChange={handleInputChange}
-                    value={values.direccion}
-                    type={'text'} 
-                    className="my-3 form-control" 
-                    placeholder="Dirección"
-                />
+    <input 
+    name="direccion"
+    onChange={handleInputChange}
+    value={values.direccion}
+    type={'text'} 
+    className="my-3 form-control" 
+    placeholder="Dirección"
+/>
 
-                <button type="submit" className="btn-checkout">Enviar</button>
-            </form>
+    <button type="submit" className="btn-checkout">Enviar</button>
 
-        </div>
-    )
+</form>
+
+    </div>
+)
 }
 
 export default Checkout

@@ -1,4 +1,4 @@
-
+import '../ItemDetail/ItemDetail.css'
 
 const Counter = ({max, Counter, setCounter, handleAgregar}) => {
 
